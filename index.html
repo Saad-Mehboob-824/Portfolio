@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .intro-container {
+    display: grid;
+    grid-template-columns: auto auto auto; /* Creates three columns with the center one auto-sized */
+    gap: 30px;
+    padding: 50px;
+    
+}
+
+.intro-card {
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 17;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.intro-img{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    grid-row-start: 1;
+    grid-row-end: 17;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* Reverse order so image comes first */
+    .intro-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro-img {
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-img img {
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .intro-card {
+        margin: 0;
+        text-align: center;
+        padding: 20px;
+    }
+
+}
+    </style>
+</head>
+
+<body class="bg-grey-500 text-gray-800 overflow-x-hidden font-sans">
+
+    <header class="flex justify-between items-center py-5 px-10 bg-whibluete bg-opacity-80 shadow-md">
+        <a href="i222577_home.html"><h2 class="text-xl font-bold">MSM.</h2></a>
+  
+        <button class=" block text-gray-700" id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+  
+        <div id="drawer" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 hidden z-10">
+            <div class="bg-white w-64 h-full shadow-lg">
+                <button id="close-btn" class="text-red-500 p-2 absolute top-0 right-0">Close X</button>
+                <ul class="space-y-6 p-4">
+                    <li><a href="i222577_Profile.html" class="hover:underline hover:text-red-500">Profile</a></li>
+                    <li><a href="i222577_Gallery.html" class="hover:underline hover:text-red-500">Gallery</a></li>
+                    <li><a href="i222577_CareerGoals.html" class="hover:underline hover:text-red-500">Career Goals</a></li>
+                    <li><a href="i222577_project.html" class="hover:underline hover:text-red-500">Projects</a></li>
+                    <li><a href="i222577_SkillsInterests.html" class="hover:underline hover:text-red-500">Skills and Interests</a></li>
+                    <li><a href="i222577_Contact.html" class="hover:underline hover:text-red-500">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const closeBtn = document.getElementById('close-btn');
+          const drawer = document.getElementById('drawer');
+  
+          menuBtn.addEventListener('click', () => {
+              drawer.classList.remove('hidden');
+          });
+  
+          closeBtn.addEventListener('click', () => {
+              drawer.classList.add('hidden');
+          });
+      </script>
+  
+    </header>
+  
+
+
+    <div class="intro-container">
+      <div class=" intro-img intro-img flex justify-center items-center rounded-2xl" class="bg-gradient-to-r" style="background: linear-gradient(to right, rgba(123, 0, 255, 0.353), rgba(255, 192, 203, 0.641), rgba(173, 216, 230, 0.32));">
+          <img src="me.png" alt="Your Image">
+      </div>
+      <div class="intro-card b rounded-2xl"  class="bg-gradient-to-r" style="background: linear-gradient(to right, rgba(123, 0, 255, 0.353), rgba(255, 192, 203, 0.641), rgba(173, 216, 230, 0.32));">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">Hello, I'm M Saad</h1>
+          <p class="text-2xl mb-6">A Software Engineer with 2 years of experience</p>
+          <a href="i222577_Contact.html"><button class="px-6 py-3 bg-red-500 text-white font-bold rounded-full hover:bg-red-600 transform hover:scale-105 transition duration-300">Get in Touch</button></a>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="contact" class="bg-red-100 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6">Want to work together?</h2>
+    <button class="px-6 py-3 bg-red-500 text-white font-bold rounded-full hover:bg-red-600 transform hover:scale-105 transition duration-300">Contact Me</button>
+</section>
+</body>
+
+</html>
+
+
+
+<!--
+Grid for Intro Section:
+Ensures balanced layout of image and text for clarity.
+Adapts well to different screen sizes, stacking on mobile for better readability.
+
+Flexbox for Header:
+Provides flexible alignment for logo and menu.
+Keeps navigation accessible and clean on all devices.
+
+Drawer Navigation
+Hides links to reduce clutter.
+Enhances user experience by keeping the layout simple.
+
+Flexbox for Contact Section:
+Centers the CTA button, making it visually prominent.
+Responsive design ensures mobile-friendly interaction.
+ -->

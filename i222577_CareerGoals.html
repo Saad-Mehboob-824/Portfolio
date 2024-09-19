@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-grey text-gray-800 overflow-x-hidden font-sans">
+
+    <header class="flex justify-between items-center py-5 px-10 bg-white bg-opacity-80 shadow-md">
+        <a href="i222577_home.html"><h2 class="text-xl font-bold">MSM.</h2></a>
+  
+        <button class=" block text-gray-700" id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+  
+        <div id="drawer" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 hidden z-10">
+            <div class="bg-white w-64 h-full shadow-lg">
+                <button id="close-btn" class="text-red-500 p-2 absolute top-0 right-0">Close X</button>
+                <ul class="space-y-6 p-4">
+                    <li><a href="i222577_Profile.html" class="hover:underline hover:text-red-500">Profile</a></li>
+                    <li><a href="i222577_Gallery.html" class="hover:underline hover:text-red-500">Gallery</a></li>
+                    <li><a href="i222577_CareerGoals.html" class="hover:underline hover:text-red-500">Career Goals</a></li>
+                    <li><a href="i222577_project.html" class="hover:underline hover:text-red-500">Projects</a></li>
+                    <li><a href="i222577_SkillsInterests.html" class="hover:underline hover:text-red-500">Skills and Interests</a></li>
+                    <li><a href="i222577_Contact.html" class="hover:underline hover:text-red-500">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const closeBtn = document.getElementById('close-btn');
+          const drawer = document.getElementById('drawer');
+  
+          menuBtn.addEventListener('click', () => {
+              drawer.classList.remove('hidden');
+          });
+  
+          closeBtn.addEventListener('click', () => {
+              drawer.classList.add('hidden');
+          });
+      </script>
+  
+    </header>
+  
+      <section id="career-goals" class="py-20 bg-red-100 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-gray-800">Career Goals</h2>
+    
+            <section id="short-term-goals" class="py-10">
+                <h3 class="text-3xl font-bold mb-10 text-center">Short-Term Goals</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+                        <img src="5.jpg" alt="Short-Term Goal 1" class="w-full h-70 object-cover rounded-md mb-4">
+                        
+                        <p class="text-gray-600">Improve technical skills in the latest technologies.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+                        <img src="6.jpg" alt="Short-Term Goal 2" class="w-full h-70 object-cover rounded-md mb-4">
+                        
+                        <p class="text-gray-600">Gain more experience through practical projects.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+                        <img src="7.jpg" alt="Short-Term Goal 3" class="w-full h-70 object-cover rounded-md mb-4">
+                        
+                        <p class="text-gray-600">Build a strong professional network in the industry.</p>
+                    </div>
+                </div>
+            </section>
+    
+
+            <section id="long-term-goals" class="py-10">
+                <h3 class="text-3xl font-bold mb-10 text-center">Long-Term Goals</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+                        <img src="8.jpg" alt="Long-Term Goal 1" class="w-full h-70 object-cover rounded-md mb-4">
+                        
+                        <p class="text-gray-600">Become a lead developer or technical architect.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+                        <img src="9.jpg" alt="Long-Term Goal 2" class="w-full h-70 object-cover rounded-md mb-4">
+                        
+                        <p class="text-gray-600">Contribute to significant open-source projects.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-white rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
+                        <img src="10.jpg" alt="Long-Term Goal 3" class="w-full h-70 object-cover rounded-md mb-4">
+                        
+                        <p class="text-gray-600">Start a tech-focused company or consultancy.</p>
+                    </div>
+                </div>
+            </section>
+    
+            
+            <div class="mt-12">
+                <p class="text-lg font-semibold text-gray-600">وَأَنْ لَيْسَ لِلْإِنْسَانِ إِلَّا مَا سَعَىٰ</p>
+                <p class="text-gray-600">Nothing belongs to man except what he strives for</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="bg-red-100 py-20 text-center">
+        <h2 class="text-3xl font-bold mb-6">Want to work together?</h2>
+        <a href="i222577_Contact.html">
+        <button class="px-6 py-3 bg-red-500 text-white font-bold rounded-full hover:bg-red-600 transform hover:scale-105 transition duration-300">Contact Me</button>
+    </a>
+    </section>
+    
+    </body>
+
+</html>
+<!-- Grid for Career Goals Section:
+Allows clear organization of short- and long-term goals with balanced spacing.
+Responsive grid adjusts for multiple screen sizes, improving readability.
+ -->

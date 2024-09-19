@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous"></script>
+
+ 
+</head>
+
+<body class="bg-gradient-to-r from-pink-200 to-purple-100 text-gray-800 overflow-x-hidden font-sans">
+
+    <header class="flex justify-between items-center py-5 px-10 bg-white bg-opacity-80 shadow-md">
+        <a href="i222577_home.html"><h2 class="text-xl font-bold">MSM.</h2></a>
+  
+        <button class=" block text-gray-700" id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+  
+        <div id="drawer" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 hidden z-10">
+            <div class="bg-white w-64 h-full shadow-lg">
+                <button id="close-btn" class="text-red-500 p-2 absolute top-0 right-0">Close X</button>
+                <ul class="space-y-6 p-4">
+                    <li><a href="i222577_Profile.html" class="hover:underline hover:text-red-500">Profile</a></li>
+                    <li><a href="i222577_Gallery.html" class="hover:underline hover:text-red-500">Gallery</a></li>
+                    <li><a href="i222577_CareerGoals.html" class="hover:underline hover:text-red-500">Career Goals</a></li>
+                    <li><a href="i222577_project.html" class="hover:underline hover:text-red-500">Projects</a></li>
+                    <li><a href="i222577_SkillsInterests.html" class="hover:underline hover:text-red-500">Skills and Interests</a></li>
+                    <li><a href="i222577_Contact.html" class="hover:underline hover:text-red-500">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const closeBtn = document.getElementById('close-btn');
+          const drawer = document.getElementById('drawer');
+  
+          menuBtn.addEventListener('click', () => {
+              drawer.classList.remove('hidden');
+          });
+  
+          closeBtn.addEventListener('click', () => {
+              drawer.classList.add('hidden');
+          });
+      </script>
+  
+    </header>
+  
+    <section id="profile" class="py-16 bg-red-100">
+    <div class="container mx-auto flex flex-col items-center justify-center text-center">
+        <div class="mb-6 transform hover:scale-105 transition duration-300">
+            <img src="saad.png" alt="" class="w-40 h-40 rounded-full object-cover shadow-lg">
+        </div>
+        
+
+        <div class="max-w-xl mb-6">
+            <h2 class="text-4xl font-bold mb-4">M Saad Mehboob</h2>
+            <p class="text-gray-600 text-lg">
+                I am a passionate software developer with a background in computer science. I am from FASY University getting a degree in Software Engineering and have a deep interest in full-stack development, cloud technologies, and AI. I enjoy solving problems and building innovative solutions.
+            </p>
+        </div>
+        
+        <div class="flex space-x-6">
+            <a href="https://linkedin.com" target="_blank" class="hover:text-blue-500 hover:scale-110 transition-all duration-300 ease-in-out">
+                <img src="fb.png" class="rounded-full h-7 w-7">
+            </a>
+            <a href="https://github.com" target="_blank" class="hover:text-blue-500 hover:scale-110 transition-all duration-300 ease-in-out">
+                <img src="x.jpg" class="rounded-full h-7 w-7">
+            </a>
+            <a href="https://twitter.com" target="_blank" class="hover:text-blue-500 hover:scale-110 transition-all duration-300 ease-in-out">
+                <img src="git.png" alt="" class="rounded-full h-7 w-7">
+            </a>
+        </div>
+    </div>
+</section>
+
+  <section id="contact" class="bg-red-100 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6">Want to work together?</h2>
+    <button class="px-6 py-3 bg-red-500 text-white font-bold rounded-full hover:bg-red-600 transform hover:scale-105 transition duration-300">Contact Me</button>
+</section>
+</body>
+
+</html>
+<!-- 
+Centered Layout for Profile Section:
+Highlights the image and bio with focus on readability.
+Creates a clean, centered design for mobile and desktop.
+Flexbox for Social Links:
+Ensures equal spacing and scaling on hover, enhancing user interaction.
+ -->

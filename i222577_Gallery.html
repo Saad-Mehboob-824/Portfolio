@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .group:hover img {
+  filter: blur(5px);
+}
+
+.group:hover .absolute {
+  opacity: 1;
+}
+
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-pink-200 to-purple-100 text-gray-800 overflow-x-hidden font-sans">
+
+    <header class="flex justify-between items-center py-5 px-10 bg-white bg-opacity-80 shadow-md">
+        <a href="i222577_home.html"><h2 class="text-xl font-bold">MSM.</h2></a>
+  
+        <button class=" block text-gray-700" id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+  
+        <div id="drawer" class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 hidden z-10">
+            <div class="bg-white w-64 h-full shadow-lg">
+                <button id="close-btn" class="text-red-500 p-2 absolute top-0 right-0">Close X</button>
+                <ul class="space-y-6 p-4">
+                    <li><a href="i222577_Profile.html" class="hover:underline hover:text-red-500">Profile</a></li>
+                    <li><a href="i222577_Gallery.html" class="hover:underline hover:text-red-500">Gallery</a></li>
+                    <li><a href="i222577_CareerGoals.html" class="hover:underline hover:text-red-500">Career Goals</a></li>
+                    <li><a href="i222577_project.html" class="hover:underline hover:text-red-500">Projects</a></li>
+                    <li><a href="i222577_SkillsInterests.html" class="hover:underline hover:text-red-500">Skills and Interests</a></li>
+                    <li><a href="i222577_Contact.html" class="hover:underline hover:text-red-500">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const closeBtn = document.getElementById('close-btn');
+          const drawer = document.getElementById('drawer');
+  
+          menuBtn.addEventListener('click', () => {
+              drawer.classList.remove('hidden');
+          });
+  
+          closeBtn.addEventListener('click', () => {
+              drawer.classList.add('hidden');
+          });
+      </script>
+  
+    </header>
+  
+
+
+
+  <!-- <section id="projects" class="py-20 ">
+    <h2 class="text-3xl font-bold mb-10 text-center">Gallery</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-10">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+            <img src="1.jpg" alt="Project 1" class="w-full h-auto object-contain rounded-md mb-4">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+            <img src="2.jpg" alt="Project 1" class="w-full h-auto object-contain rounded-md mb-4">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 object-contain">
+            <img src="11.jpg" alt="Project 1" class="w-full h-auto object-contain rounded-md mb-4 object-contain">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300 object-contain">
+            <img src="image.png" alt="Project 1" class="w-full h-auto object-contain rounded-md mb-4">
+        </div> -->
+
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold mb-10 text-center">Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-10">
+              
+              <div class="relative group">
+                <img src="1.jpg" alt="Coding" class="w-full h-auto object-contain rounded-md">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-white text-xl">Coding</span>
+                </div>
+              </div>
+              
+              <div class="relative group">
+                <img src="2.jpg" alt="Project Management" class="w-full h-auto object-contain rounded-md">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-white text-xl">Project Management</span>
+                </div>
+              </div>
+              
+              <div class="relative group">
+                <img src="11.jpg" alt="Craft" class="w-full h-auto object-contain rounded-md">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-white text-xl">Craft</span>
+                </div>
+              </div>
+              
+              <div class="relative group">
+                <img src="image.png" alt="Hiking" class="w-full h-auto object-contain rounded-md">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-white text-xl">Hiking</span>
+                </div>
+              </div>
+          
+            </div>
+          </section>
+          
+        
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="contact" class="bg-red-100 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6">Want to work together?</h2>
+    <button class="px-6 py-3 bg-red-500 text-white font-bold rounded-full hover:bg-red-600 transform hover:scale-105 transition duration-300">Contact Me</button>
+</section>
+</body>
+
+</html>
+<!-- Grid for Gallery:
+Organizes images into columns, making it easy to scan.
+Responsive for various screen sizes (1, 2, or 3 columns).
+ -->
